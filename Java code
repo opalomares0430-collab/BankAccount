@@ -1,0 +1,78 @@
+package module1;
+
+public class BankAccount {
+    // Fields
+	private String firstName;
+	private String lastName;
+	private int accountID;
+	protected double balance;
+	
+	// Default constructor (balance = 0)
+	public BankAccount() {
+		balance = 0.0;
+	}
+	
+	// Parameterized constructor (optional but useful)
+	public BankAccount(String firstName, String lastName, int accountID, double balance) {
+	    this.firstName = firstName;
+	    this.lastName = lastName;
+	    this.accountID = accountID;
+	    this.balance = balance;
+	}
+	
+	// Deposit method
+	public void deposit(double amount) {
+		balance = balance + amount;
+	}
+	
+	// Withdrawal method
+	public void withdrawal(double amount) {
+		balance = balance - amount;
+	}
+	
+	// Get balance
+	public double getBalance1() {
+		return balance;
+	}
+	
+	// Setters
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	
+	public void setAccountID(int accountID) {
+		this.accountID = accountID;
+	}
+	
+	// Getters
+	public String getFirstName() {
+		return firstName;
+	}
+	
+	public String getLastName() {
+		return lastName;
+	}
+	
+	public int getAcoountID() {
+		return accountID;
+	}
+	
+	public double getBalance() {
+		return balance;
+	}
+	
+	// Account summary method
+	public void accountSummary() {
+		System.out.println("Account Summary");
+		System.out.println("First Name: " + firstName);
+		System.out.println("Last Name: " + lastName);
+		System.out.println("Account ID: " + accountID);
+		System.out.println("Balance: $" + balance);
+		
+	}
+}
+
