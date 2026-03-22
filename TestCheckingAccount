@@ -1,0 +1,22 @@
+package module1;
+
+public class TestCheckingAccount {
+
+	public static void main(String[] args) {
+		
+		CheckingAccount myAccount=
+		     new CheckingAccount("Olivia", "Palomares", 10003, 1000.00, 1.5);
+		
+		System.out.println("Account information:");
+		myAccount.accountSummary();
+		
+		System.out.println();
+		System.out.println("Taking out $300...");
+		myAccount.withdrawal(300.00);
+		
+		System.out.println();
+		System.out.println("Updated account information:");
+		myAccount.accountSummary();
+	}
+
+}
