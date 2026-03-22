@@ -1,0 +1,19 @@
+package module1;
+
+public class TestBankAccount {
+
+	public static void main(String[] args) {
+		BankAccount account = new BankAccount();
+		
+		account.setFirstName("Olivia");
+		account.setLastName("Palomares");
+		account.setAccountID(10003);
+		
+		account.deposit(1000.00);
+		account.withdrawal(300.00);
+		
+		account.accountSummary();
+
+	}
+
+}
