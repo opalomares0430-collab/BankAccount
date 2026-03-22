@@ -1,0 +1,39 @@
+package module1;
+
+public class CheckingAccount extends BankAccount {
+	
+	private double interestRate;
+	
+	// Default constructor
+	public CheckingAccount() {
+	    super();
+	    interestRate = 0.0;
+    }
+	
+	// Parameterized constructor
+	public CheckingAccount(String firstName, String lastName, int accountID, double balance, double interestRate) {
+		super(firstName, lastName, accountID, balance);
+		this.interestRate = interestRate;
+	}
+	
+	// Override withdrawall to allow overdraft
+	@Override
+	public void withdrawal(double amount) {
+		balance = balance - amount;
+		
+		if (balance < 0) {
+			balance = balance -30;
+			System.out.println("Overdraft happened. A $30 fee was charged.");
+		}
+		
+		System.out.println("Current balance: $" + balance);	
+	}
+	
+	// Override account summary to include interest rate
+	@Override
+	public void accountSummary() {
+		super.accountSummary();
+		System.out.println("Interest Rate: " + interestRate + "%");
+	}
+}
+
